@@ -1,0 +1,7 @@
+# 忽略 sap2000/models/ 下的所有文件
+sap2000/models/*
+# 但保留 .sdb、.py 和 .txt 文件
+!sap2000/models/*.sdb
+!sap2000/models/*.py
+!sap2000/models/*.txt
+.venv
