@@ -4,4 +4,5 @@ sap2000/models/*
 !sap2000/models/*.sdb
 !sap2000/models/*.py
 !sap2000/models/*.txt
-.venv
+venv
+abaqus/models/*
