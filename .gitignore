@@ -6,3 +6,5 @@ sap2000/models/*
 !sap2000/models/*.txt
 venv
 abaqus/models/*
+.ipynb_checkpoints
+code/.ipynb_checkpoints
