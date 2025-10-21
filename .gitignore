@@ -5,6 +5,9 @@ sap2000/models/*
 !sap2000/models/*.py
 !sap2000/models/*.txt
 venv
-abaqus/models/*
+abaqus/models/**/*.log
+abaqus/models/**/job*
+abaqus/models/**/abq*
+abaqus/models/**/*.py
 .ipynb_checkpoints
 code/.ipynb_checkpoints
