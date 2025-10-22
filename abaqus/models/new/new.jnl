@@ -1,0 +1,164 @@
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+del mdb.models['Model-1'].parts['Part-5']
+del mdb.models['Model-1'].parts['Bolt'].features['Partition cell-1']
+mdb.models['Model-1'].parts['Bolt'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Bolt'].cells.getSequenceFromMask(('[#1 ]', ), 
+    ), point1=mdb.models['Model-1'].parts['Bolt'].InterestingPoint(
+    mdb.models['Model-1'].parts['Bolt'].edges[2], MIDDLE), point2=
+    mdb.models['Model-1'].parts['Bolt'].InterestingPoint(
+    mdb.models['Model-1'].parts['Bolt'].edges[0], MIDDLE), point3=
+    mdb.models['Model-1'].parts['Bolt'].InterestingPoint(
+    mdb.models['Model-1'].parts['Bolt'].edges[5], CENTER))
+mdb.models['Model-1'].parts['Bolt'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Bolt'].cells.getSequenceFromMask(('[#2 ]', ), 
+    ), point1=mdb.models['Model-1'].parts['Bolt'].InterestingPoint(
+    mdb.models['Model-1'].parts['Bolt'].edges[14], MIDDLE), point2=
+    mdb.models['Model-1'].parts['Bolt'].InterestingPoint(
+    mdb.models['Model-1'].parts['Bolt'].edges[26], MIDDLE), point3=
+    mdb.models['Model-1'].parts['Bolt'].InterestingPoint(
+    mdb.models['Model-1'].parts['Bolt'].edges[12], MIDDLE))
+del mdb.models['Model-1'].parts['Bolt'].features['Partition cell-2']
+mdb.models['Model-1'].parts['Bolt'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Bolt'].cells.getSequenceFromMask(('[#3 ]', ), 
+    ), point1=mdb.models['Model-1'].parts['Bolt'].InterestingPoint(
+    mdb.models['Model-1'].parts['Bolt'].edges[14], MIDDLE), point2=
+    mdb.models['Model-1'].parts['Bolt'].InterestingPoint(
+    mdb.models['Model-1'].parts['Bolt'].edges[26], MIDDLE), point3=
+    mdb.models['Model-1'].parts['Bolt'].InterestingPoint(
+    mdb.models['Model-1'].parts['Bolt'].edges[12], MIDDLE))
+mdb.models['Model-1'].parts['Bolt'].DatumPlaneByPrincipalPlane(offset=0.0, 
+    principalPlane=XYPLANE)
+mdb.models['Model-1'].parts['Bolt'].DatumPlaneByPrincipalPlane(offset=25.0, 
+    principalPlane=XYPLANE)
+mdb.models['Model-1'].parts['Bolt'].PartitionCellByDatumPlane(cells=
+    mdb.models['Model-1'].parts['Bolt'].cells.getSequenceFromMask(('[#f ]', ), 
+    ), datumPlane=mdb.models['Model-1'].parts['Bolt'].datums[8])
+mdb.models['Model-1'].parts['Bolt'].PartitionCellByDatumPlane(cells=
+    mdb.models['Model-1'].parts['Bolt'].cells.getSequenceFromMask(('[#b8 ]', ), 
+    ), datumPlane=mdb.models['Model-1'].parts['Bolt'].datums[9])
+mdb.models['Model-1'].parts['Column'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Column'].cells.getSequenceFromMask(('[#1 ]', 
+    ), ), point1=mdb.models['Model-1'].parts['Column'].vertices[28], point2=
+    mdb.models['Model-1'].parts['Column'].vertices[10], point3=
+    mdb.models['Model-1'].parts['Column'].InterestingPoint(
+    mdb.models['Model-1'].parts['Column'].edges[14], MIDDLE))
+mdb.models['Model-1'].parts['Column'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Column'].cells.getSequenceFromMask(('[#1 ]', 
+    ), ), point1=mdb.models['Model-1'].parts['Column'].vertices[4], point2=
+    mdb.models['Model-1'].parts['Column'].vertices[11], point3=
+    mdb.models['Model-1'].parts['Column'].vertices[23])
+mdb.models['Model-1'].parts['Column'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Column'].cells.getSequenceFromMask(('[#4 ]', 
+    ), ), point1=mdb.models['Model-1'].parts['Column'].vertices[24], point2=
+    mdb.models['Model-1'].parts['Column'].InterestingPoint(
+    mdb.models['Model-1'].parts['Column'].edges[34], MIDDLE), point3=
+    mdb.models['Model-1'].parts['Column'].InterestingPoint(
+    mdb.models['Model-1'].parts['Column'].edges[22], MIDDLE))
+mdb.models['Model-1'].parts['Column'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Column'].cells.getSequenceFromMask(('[#2 ]', 
+    ), ), point1=mdb.models['Model-1'].parts['Column'].InterestingPoint(
+    mdb.models['Model-1'].parts['Column'].edges[27], MIDDLE), point2=
+    mdb.models['Model-1'].parts['Column'].vertices[20], point3=
+    mdb.models['Model-1'].parts['Column'].vertices[28])
+mdb.models['Model-1'].parts['Column'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Column'].cells.getSequenceFromMask(('[#4 ]', 
+    ), ), point1=mdb.models['Model-1'].parts['Column'].InterestingPoint(
+    mdb.models['Model-1'].parts['Column'].edges[12], MIDDLE), point2=
+    mdb.models['Model-1'].parts['Column'].InterestingPoint(
+    mdb.models['Model-1'].parts['Column'].edges[4], CENTER), point3=
+    mdb.models['Model-1'].parts['Column'].InterestingPoint(
+    mdb.models['Model-1'].parts['Column'].edges[11], MIDDLE))
+mdb.models['Model-1'].parts['Column'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['Column'].cells.getSequenceFromMask(('[#10 ]', 
+    ), ), point1=mdb.models['Model-1'].parts['Column'].InterestingPoint(
+    mdb.models['Model-1'].parts['Column'].edges[35], CENTER), point2=
+    mdb.models['Model-1'].parts['Column'].vertices[23], point3=
+    mdb.models['Model-1'].parts['Column'].InterestingPoint(
+    mdb.models['Model-1'].parts['Column'].edges[25], CENTER))
+mdb.models['Model-1'].parts['End-Plate'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['End-Plate'].cells.getSequenceFromMask((
+    '[#1 ]', ), ), point1=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[6], MIDDLE), point2=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[4], MIDDLE), point3=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[10], MIDDLE))
+mdb.models['Model-1'].parts['End-Plate'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['End-Plate'].cells.getSequenceFromMask((
+    '[#3 ]', ), ), point1=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[18], MIDDLE), point2=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[0], MIDDLE), point3=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[5], MIDDLE))
+mdb.models['Model-1'].parts['End-Plate'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['End-Plate'].cells.getSequenceFromMask((
+    '[#f ]', ), ), point1=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[39], CENTER), point2=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[24], CENTER), point3=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[24], MIDDLE))
+#* Feature creation failed.
+mdb.models['Model-1'].parts['End-Plate'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['End-Plate'].cells.getSequenceFromMask((
+    '[#c ]', ), ), point1=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[17], CENTER), point2=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[39], CENTER), point3=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[24], MIDDLE))
+del mdb.models['Model-1'].parts['End-Plate'].features['Partition cell-3']
+mdb.models['Model-1'].parts['End-Plate'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['End-Plate'].cells.getSequenceFromMask((
+    '[#c ]', ), ), point1=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[24], CENTER), point2=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[39], CENTER), point3=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[30], CENTER))
+mdb.models['Model-1'].parts['End-Plate'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['End-Plate'].cells.getSequenceFromMask((
+    '[#18 ]', ), ), point1=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[69], CENTER), point2=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[57], CENTER), point3=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[64], CENTER))
+mdb.models['Model-1'].parts['End-Plate'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['End-Plate'].cells.getSequenceFromMask((
+    '[#5c ]', ), ), point1=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[62], MIDDLE), point2=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[65], CENTER), point3=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[63], CENTER))
+mdb.models['Model-1'].parts['End-Plate'].PartitionCellByPlaneThreePoints(cells=
+    mdb.models['Model-1'].parts['End-Plate'].cells.getSequenceFromMask((
+    '[#a60 ]', ), ), point1=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[114], CENTER), point2=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[79], CENTER), point3=
+    mdb.models['Model-1'].parts['End-Plate'].InterestingPoint(
+    mdb.models['Model-1'].parts['End-Plate'].edges[112], CENTER))
+# Save by wkj on 2025_10_22-22.12.13; build 2024 2023_09_21-20.55.25 RELr426 190762
