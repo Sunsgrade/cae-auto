@@ -5,9 +5,12 @@ sap2000/models/*
 !sap2000/models/*.py
 !sap2000/models/*.txt
 venv
-abaqus/models/**/*.log
-abaqus/models/**/job*
-abaqus/models/**/abq*
-abaqus/models/**/*.py
+# 忽略abaqus/models/**/下除.py、.cae和.jnl文件外的所有文件
+abaqus/models/**/*
+!abaqus/models/**/
+!abaqus/models/**/*.py
+!abaqus/models/**/*.cae
+!abaqus/models/**/*.jnl
+
 .ipynb_checkpoints
 code/.ipynb_checkpoints
