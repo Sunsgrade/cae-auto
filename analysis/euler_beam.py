@@ -1,7 +1,7 @@
 from sympy import Matrix,det,symbols,sin,cos,sinh,cosh,diff,Eq,solve,simplify,expand,pprint
-from sympy import latex,lambdify
-# 定义符号
-a,x,L,E,I,w,M,J = symbols('a x L E I w M J',nonzero=True)
+from sympy import latex,lambdify,factor,symbols,sstr
+# 定义符号  M 端部质量，m 分布质量
+a,x,L,E,I,w,M,J,m = symbols('a x L E I w M J m',nonzero=True)
 A,B,C,D = symbols('A B C D')
 # 定义Q(x)和各阶导
 Q = A*sin(a*x) + B*cos(a*x) + C*sinh(a*x) + D*cosh(a*x)
@@ -31,3 +31,9 @@ M_c = Matrix([
     [f1_c,f1_d],
     [f2_c,f2_d],
 ])
+det = M_c.det()
+# w替换掉
+det_w = det.subs(w*w,E*I*a**4/m)
+det_w = factor(det_w)
+det_w_f = simplify(det_w)
+print(latex(det_w_f))
