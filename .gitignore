@@ -11,7 +11,7 @@ abaqus/models/**/*
 !abaqus/models/**/*.py
 !abaqus/models/**/*.cae
 !abaqus/models/**/*.jnl
-
+latex/*.pdf
 .ipynb_checkpoints
 # 忽略code里面不用的文件，synctex.gz，latex和pdf点击command互联的文件
 code/.ipynb_checkpoints
