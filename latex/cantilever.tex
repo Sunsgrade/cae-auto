@@ -1,0 +1,75 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\geometry{a4paper, left=1.5cm, right=1.5cm, top=2cm, bottom=2cm}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{hyperref}
+
+\title{悬臂梁推导}
+\author{EulerBeam 自动生成}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{悬臂梁推导}
+
+% 边界条件 bc1
+
+\subsection*{边界条件 bc1}
+
+\begin{equation}
+\begin{adjustbox}{max width=\textwidth}$B + D = 0$\end{adjustbox}
+\end{equation}
+
+% 边界条件 bc2
+
+\subsection*{边界条件 bc2}
+
+\begin{equation}
+\begin{adjustbox}{max width=\textwidth}$A a + C a = 0$\end{adjustbox}
+\end{equation}
+
+% 边界条件 bc3
+
+\subsection*{边界条件 bc3}
+
+\begin{equation}
+\begin{adjustbox}{max width=\textwidth}$E I a^{3} \left(- A \cos{\left(L a \right)} + B \sin{\left(L a \right)} + C \cosh{\left(L a \right)} + D \sinh{\left(L a \right)}\right) = - M w^{2} \left(A \sin{\left(L a \right)} + B \cos{\left(L a \right)} + C \sinh{\left(L a \right)} + D \cosh{\left(L a \right)}\right)$\end{adjustbox}
+\end{equation}
+
+% 边界条件 bc4
+
+\subsection*{边界条件 bc4}
+
+\begin{equation}
+\begin{adjustbox}{max width=\textwidth}$E I a^{2} \left(- A \sin{\left(L a \right)} - B \cos{\left(L a \right)} + C \sinh{\left(L a \right)} + D \cosh{\left(L a \right)}\right) = 0$\end{adjustbox}
+\end{equation}
+
+% 系数矩阵 M\_c
+
+\subsection*{系数矩阵 M\_c}
+
+\[
+\begin{adjustbox}{max width=\textwidth}$\left[\begin{matrix}E I a^{3} \cos{\left(L a \right)} + E I a^{3} \cosh{\left(L a \right)} - M w^{2} \sin{\left(L a \right)} + M w^{2} \sinh{\left(L a \right)} & - E I a^{3} \sin{\left(L a \right)} + E I a^{3} \sinh{\left(L a \right)} - M w^{2} \cos{\left(L a \right)} + M w^{2} \cosh{\left(L a \right)}\\E I a^{2} \sin{\left(L a \right)} + E I a^{2} \sinh{\left(L a \right)} & E I a^{2} \cos{\left(L a \right)} + E I a^{2} \cosh{\left(L a \right)}\end{matrix}\right]$\end{adjustbox}
+\]
+
+% 最终结果 det
+
+\subsection*{最终结果 det}
+
+\begin{equation}
+\begin{adjustbox}{max width=\textwidth}$\frac{2 E^{2} I^{2} a^{5} \left(- M a \sin{\left(L a \right)} \cosh{\left(L a \right)} + M a \cos{\left(L a \right)} \sinh{\left(L a \right)} + m \cos{\left(L a \right)} \cosh{\left(L a \right)} + m\right)}{m}$\end{adjustbox}
+\end{equation}
+
+% 简化结果 det\_simple
+
+\subsection*{简化结果 det\_simple}
+
+\begin{equation}
+\begin{adjustbox}{max width=\textwidth}$\frac{m \cos{\left(a \right)} \cosh{\left(a \right)} + m - \frac{M a \sin{\left(a \right)} \cosh{\left(a \right)}}{L} + \frac{M a \cos{\left(a \right)} \sinh{\left(a \right)}}{L}}{m}$\end{adjustbox}
+\end{equation}
+
+\end{document}
