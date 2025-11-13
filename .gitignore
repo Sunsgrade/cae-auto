@@ -13,7 +13,8 @@ abaqus/models/**/*
 !abaqus/models/**/*.jnl
 latex/*
 !latex/*.tex
-coding/eulerBeam/__pycache__/
+coding/**/.pyc
+coding/**/__pycache__/
 .ipynb_checkpoints
 # 忽略code里面不用的文件，synctex.gz，latex和pdf点击command互联的文件
 code/.ipynb_checkpoints

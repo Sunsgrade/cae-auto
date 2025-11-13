@@ -4,7 +4,7 @@ import os
 
 class EulerBeam:
     def __init__(self, bc_fixed_func=None, bc_free_func=None):
-        # 定义符号  M 顶端点质量，m 分布质量
+        # 定义符号  M 顶端点质量，m 分布质量，最后的nonzero=True是定义的是所有符号都不为零
         self.a, self.x, self.L, self.E, self.I, self.w, self.M, self.J, self.m = symbols('a x L E I w M J m', nonzero=True)
         self.A, self.B, self.C, self.D = symbols('A B C D')
         # 边界类型
@@ -21,6 +21,7 @@ class EulerBeam:
         self._solve()
         self._c_matrix()
         self._replace()
+
     # _ 表示这是一个内部方法（internal method），不建议外部直接调用。
     def _Qx(self):
         """
@@ -60,10 +61,10 @@ class EulerBeam:
             raise ValueError("无法求解 A, B —— 检查边界条件定义。")
 
     def _c_matrix(self):
-        bc3_sub = self.bc3.subs(self.sol)
-        bc4_sub = self.bc4.subs(self.sol)
-        f1 = expand(bc3_sub.lhs - bc3_sub.rhs)
-        f2 = expand(bc4_sub.lhs - bc4_sub.rhs)
+        bc3 = self.bc3.subs(self.sol)
+        bc4 = self.bc4.subs(self.sol)
+        f1 = expand(bc3.lhs - bc3.rhs)
+        f2 = expand(bc4.lhs - bc4.rhs)
         self.M_c = Matrix([
             [f1.coeff(self.C),f1.coeff(self.D)],
             [f2.coeff(self.C),f2.coeff(self.D)],
@@ -72,9 +73,9 @@ class EulerBeam:
     def _replace(self):
         det = self.M_c.det()
         # w替换掉
-        det_w = det.subs(self.w**2,self.E*self.I*self.a**4/self.m)
-        det_w = factor(det_w)
-        self.det = simplify(det_w)
+        det = det.subs(self.w**2,self.E*self.I*self.a**4/self.m)
+        det = factor(det)
+        self.det = simplify(det)
         self.det_simple = simplify(self.det/(2*self.E**2 * self.I**2 * self.a**5))
         self.det_simple = self.det_simple.subs(self.a,self.a/self.L)
 
@@ -86,6 +87,7 @@ class EulerBeam:
             expressions (list): [(描述, 表达式, 是否编号), ...]
             title (str, optional): 文档标题
         """
+        # 返回文件名所在的文件夹路径
         folder = os.path.dirname(filename)
         if folder and not os.path.exists(folder):
             os.makedirs(folder, exist_ok=True)
